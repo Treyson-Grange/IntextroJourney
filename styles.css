@@ -1,0 +1,65 @@
+.nav-bar {
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    background-color: #999ac6;
+    color: #3786E1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 18pt;}
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;}
+.nav-bar li {
+    justify-content: center;
+    align-items: center;
+    float: left;
+    text-decoration: none;
+    /* Or you can use display: inline; */}
+.nav-bar a {
+    text-decoration: none;
+    color: #e8ebe4;}
+.nav-bar li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;}
+.nav-bar li a.active {            
+    background-color: #3786E1;                    }
+
+.page {
+    display: flex;
+}
+.container {
+    /* width: fit-content; */
+    justify-content: center;
+    flex-grow: 4;
+    margin: 10pt;
+    padding: 10pt;
+    background-color: #b8bacf;
+
+}
+.container h1 {
+    background-color: #999ac6;
+    margin: 10pt;
+    padding: 10pt;
+}
+.form-box {
+    flex-grow: 6;
+}
+.register {
+    justify-self: right;
+    align-items: right;
+}
+/* 
+COLOR PALETTE
+#a4a99e
+#999ac6
+#b8bacf
+#d2d5dd
+#e8ebe4
+*/
