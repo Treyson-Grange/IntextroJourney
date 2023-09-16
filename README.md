@@ -1,4 +1,4 @@
-#IntExtroJourney#
+# IntExtroJourney #
 
 Intextroverse is your guide to embracing and balancing introversion and extroversion. With tailored challenges, a supportive community, and personalized guidance, it's your path to self-discovery and personal growth.
 
