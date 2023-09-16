@@ -36,8 +36,8 @@
                 <input type="text" name="task" id="task"><br></br>
                 <label for="points">Points:<br></label>
                 <input type="number" name="points" id="points"><br></br>
-                <label for="test">Test:<br></label>
-                <input type="text" name="test" id="test"><br></br>
+                
+                <input type="hidden" name="test" id="test"><br></br>
                 <input type="submit" name="submit" id="submit">
             </form>
         </div>

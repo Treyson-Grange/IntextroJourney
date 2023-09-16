@@ -55,11 +55,18 @@
     justify-self: right;
     align-items: right;
 }
+.user h1 {
+    background-color: #7a7cff;
+    margin: 10pt;
+    padding: 10pt;    
+}
 /* 
 COLOR PALETTE
+#7a7cff
 #a4a99e
 #999ac6
 #b8bacf
 #d2d5dd
 #e8ebe4
+#d4af37
 */

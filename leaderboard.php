@@ -12,13 +12,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        body{ 
+        h1{ 
             text-align: center; 
         }
     </style>
-    <title>Document</title>
+    <title>Leaderboard</title>
 </head>
 <body>
 <?php
@@ -32,7 +33,7 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="get-task.php">Get Task</a></li>
             <li><a href="add-tasks.php">Add Tasks</a></li>
-            <li><a href=leaderboard.php>LeaderBoard</a></li>
+            <li><a href="leaderboard.php">LeaderBoard</a></li>
         </ul>
         
     </nav>' . $_SESSION['username'];
@@ -43,12 +44,18 @@
     <?php
     $index = 1;
         while ($row = $result->fetch_assoc()) {
+            
             // Access the columns of each row
             $userId = $row['id'];
             $username = $row['username'];
             $points = $row['points'];
-
-            echo '<div style="width:50%; margin:0 auto;" class="container"><h1>' . $index . ')  '  . $username . ': '. $points . '</h1></div><br>';
+            if($username == $_SESSION['username']) {
+                echo '<div style="width:50%; margin:0 auto;" class="container"><h1 style="color: #fff;">' . $index . ')  '  . $username . ': '. $points . '</h1></div><br>';
+            }
+            else {
+                echo '<div style="width:50%; margin:0 auto;" class="container"><h1>' . $index . ')  '  . $username . ': '. $points . '</h1></div><br>';
+            }
+            
         $index += 1;
         }
         $result->free();

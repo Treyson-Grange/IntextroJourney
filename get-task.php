@@ -32,7 +32,8 @@
         
     </nav>' . $_SESSION['username'];
     }
-    echo "<br><br><br>" .  $_SESSION["username"];
+    echo "<br>";
+    
 
 
     
@@ -51,13 +52,9 @@
         while ($row = $result->fetch_assoc()) {
             $data[] = $row;
         }
-        foreach ($data as $row) {
-            echo "<br><br><br>" .  "ID: " . $row["id"] . ", Name: " . $row["task"] . ", Points: " . $row["points"] . "<br>";
-        }
+      
         
         return $data;
-        
-
     }
     
     function getPoint() {
@@ -65,15 +62,31 @@
     }
 
     $rows = fetchRandom();
-    echo "asdf";
     
     foreach ($rows as $row) {
         $rowrow = $row["points"];
+        $task = $row["task"];
     }
     ?>
 
     <form action="connect.php" method="POST">
-        <input type="submit" id="subm" name="taskcomplete">
+    </br>
+        <div class="container">
+            <div class="row align-items-start">
+                <div style="justify-content: right;" class="col-lg-6">
+                    Task: <b><?php echo $task; ?></b>
+                </div>
+                |
+                <div class="col">
+                    Points: <b><?php echo $rowrow ?></b>
+                </div>
+                <div class="col">
+                    <button type="submit" id="subm" name="taskcomplete" class="btn btn-secondary">Task Complete!</button>
+                </div>
+            </div>
+        </div>
+            
+        
         <input type="hidden" id="points" name="points" value="<?php echo $rowrow ?>">
         
     </form>

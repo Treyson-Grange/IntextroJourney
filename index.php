@@ -26,13 +26,6 @@
     </nav>' . $_SESSION['username'];
     }
 ?>
-<!-- <nav class="nav-bar">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="get-task.php">Get Task</a></li>
-                <li><a href="add-tasks.php">Add Tasks</a></li>
-            </ul>
-            
-        </nav> -->
+
 </body>
 </html>
