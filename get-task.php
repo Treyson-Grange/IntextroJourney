@@ -27,12 +27,14 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="get-task.php">Get Task</a></li>
             <li><a href="add-tasks.php">Add Tasks</a></li>
-            <li><a href=leaderboard.php>LeaderBoard</a></li>
+            <li><a href="leaderboard.php">LeaderBoard</a></li>
         </ul>
         
     </nav>' . $_SESSION['username'];
     }
     echo "<br><br><br>" .  $_SESSION["username"];
+
+
     
 
 
@@ -50,13 +52,31 @@
             $data[] = $row;
         }
         foreach ($data as $row) {
-            echo "<br><br><br>" .  "ID: " . $row["id"] . ", Name: " . $row["task"] . ", Email: " . $row["points"] . "<br>";
+            echo "<br><br><br>" .  "ID: " . $row["id"] . ", Name: " . $row["task"] . ", Points: " . $row["points"] . "<br>";
         }
+        
+        return $data;
+        
+
     }
-    fetchRandom();
+    
+    function getPoint() {
+        return;
+    }
+
+    $rows = fetchRandom();
+    echo "asdf";
+    
+    foreach ($rows as $row) {
+        $rowrow = $row["points"];
+    }
     ?>
 
-
+    <form action="connect.php" method="POST">
+        <input type="submit" id="subm" name="taskcomplete">
+        <input type="hidden" id="points" name="points" value="<?php echo $rowrow ?>">
+        
+    </form>
 
 </body>
 </html>
