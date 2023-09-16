@@ -1,3 +1,19 @@
-##TOBENAMED
+#IntExtroJourney#
 
-The general idea of this project was to create a website that introverts can use to accept challenges that will bring them out of their comfort zones. 
+Intextroverse is your guide to embracing and balancing introversion and extroversion. With tailored challenges, a supportive community, and personalized guidance, it's your path to self-discovery and personal growth.
+
+As of now, this site is not hosted on the cloud.
+
+## Installation ##
+If you would like to run this on your own XAMPP server:
+- git clone into xampp/htdocs/YOUR_DIR
+- Open XAMPP Control Panel and start Apache and MySQL
+- Navigate to localhost
+
+
+## What I learned ##
+
+- PHP
+- MySQL and databases in general
+- further JS, CSS, HTML
+
